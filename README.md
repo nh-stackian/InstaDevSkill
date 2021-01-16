@@ -1,4 +1,7 @@
-## Usage
+## Usage 
+      --------------------
+      | Dockerized Setup |
+      --------------------
 
 run `docker-compose up -d --build site` first time for buiding environment.
 run `docker-compose up -d site`
@@ -49,7 +52,17 @@ The current version of Laravel (8 as of today) uses MailHog as the default appli
 To see the dashboard and view any emails coming through the system, visit [localhost:8025](http://localhost:8025) after running `docker-compose up -d site`.
 
 
-## @==**==**==**=@
-if permission issue occure, perhaps  'sudo' will be helpfull.
 
-all the command can be run in `src`
+      ------------------------
+      | Non-Dockerized Setup |
+      ------------------------
+
+Only `src` directory is usefull to you.
+
+
+
+
+      ===================================================================
+      |  - if permission issue occure, perhaps  'sudo' will be helpfull.|
+      |  - all the command can be run in `src`                          |
+      ===================================================================
