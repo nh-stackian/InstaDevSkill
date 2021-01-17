@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->timestamp('date_of_birth')->nullable();
             $table->text('bio')->nullable();
-            $table->string('username')->Unique();
+            $table->string('user_name')->Unique();
             $table->string('phone_number')->unique();
             $table->string('gender');
             $table->tinyInteger('account_type');
