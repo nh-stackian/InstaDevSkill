@@ -24,11 +24,13 @@ class CreateUsersTable extends Migration
             $table->timestamp('date_of_birth')->nullable();
             $table->text('bio')->nullable();
             $table->string('user_name')->Unique();
-            $table->string('phone_number')->unique();
+            $table->string('phone')->unique();
             $table->string('gender');
-            $table->tinyInteger('account_type');
+            $table->tinyInteger('account_type')->default(1);
             $table->rememberToken();
             $table->timestamps();
+
+
         });
     }
 

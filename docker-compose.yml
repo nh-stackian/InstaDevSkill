@@ -47,8 +47,7 @@ services:
     container_name: php_instadevskill
     volumes:
       - ./src:/var/www/html:delegated
-    ports:
-      - 9001:9000
+   
     networks:
       - laravel
 

@@ -15,10 +15,15 @@ class CreateFollowsTable extends Migration
     {
         Schema::create('follows', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->unsignedBigInteger('follower_id');
-
-            $table->foreignId('follower_id')->constrained('users');
+            $table
+                ->foreignId('user_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
+            $table
+                ->foreignId('follower_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
+            $table->unique(['user_id', 'follower_id']);
 
             $table->timestamps();
         });
